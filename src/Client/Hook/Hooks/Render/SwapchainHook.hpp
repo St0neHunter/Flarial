@@ -38,4 +38,5 @@ public:
     static bool hasResized;
     static int currentBitmap;
     static inline UINT flagsreal;
+    static bool rendered;
 };

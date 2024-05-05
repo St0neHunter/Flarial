@@ -15,6 +15,8 @@
 #include "Hooks/Visual/OverworldFogColorHook.hpp"
 #include "Hooks/Visual/TimeChangerHook.hpp"
 #include "Hooks/Game/getSensHook.hpp"
+#include "Hooks/Render/RendererContextD3D12.hpp"
+#include "Hooks/Render/DrawIndexedInstancedD3D12.hpp"
 #include "Hooks/Game/RenderItemGroup.hpp"
 #include "Hooks/Game/getCurrentSwingDuration.hpp"
 
@@ -63,6 +65,8 @@ void HookManager::initialize() {
     hooks.push_back(new TimeChangerHook());
     hooks.push_back(new SendPacketHook());
     hooks.push_back(new getSensHook());
+    hooks.push_back(new RendererContextD3D12());
+    hooks.push_back(new DrawIndexedInstancedD3D12());
     //hooks.push_back(new RenderItemGroupHook());
     //hooks.push_back(new getCurrentSwingDuration());
 

@@ -6,6 +6,8 @@
 void SigInit::init2080() {
     Logger::debug("[Signatures] Loading sigs for 1.20.8X");
 
+    ADD_SIG("RendererContextD3D12::submit", "48 89 5C 24 18 55 56 57 41 54 41 55 41 56 41 57 48 8D AC 24 10 E2");
+
     ADD_SIG("Keyboard::feed", "? ? ? ? ? ? ? 4C 8D 05 ? ? ? ? 89 54 24 20 88");
     ADD_SIG("MouseDevice::feed", "? ? ? ? ? ? ? ? 89 68 ? 48 89 70 ? 57 41 54 41 55 41 56 41 57 48 83 EC ? 44 0F B7 BC 24 ? ? ? ? 48 8B D9");
 

@@ -41,7 +41,7 @@ float Constraints::RelativeConstraint(float percent, const std::string &dimensio
     float screenWidth;
     float screenHeight;
 
-    if (ignore_stack || FlarialGUI::dimensionStack.empty()) {
+    if (true) {
         screenWidth = MC::windowSize.x;
         screenHeight = MC::windowSize.y;
     } else {

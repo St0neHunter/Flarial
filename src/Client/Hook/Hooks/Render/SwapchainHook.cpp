@@ -21,6 +21,7 @@ static std::chrono::steady_clock::time_point start = std::chrono::high_resolutio
 static std::chrono::steady_clock::time_point previousFrameTime = std::chrono::high_resolution_clock::now();
 
 int SwapchainHook::currentBitmap;
+bool SwapchainHook::rendered;
 
 bool unloadDll(const wchar_t* moduleName) {
     HMODULE hModule = GetModuleHandleW(moduleName);
@@ -89,14 +90,12 @@ void SwapchainHook::enableHook() {
         // }
     }
 
-    this->manualHook(swapchain_ptr, (void *) swapchainCallback, (void **) &funcOriginal);
+    //this->manualHook(swapchain_ptr, (void *) swapchainCallback, (void **) &funcOriginal);
 }
 
 bool SwapchainHook::init = false;
 
 void SwapchainHook::swapchainCallback(IDXGISwapChain3 *pSwapChain, UINT syncInterval, UINT flags) {
-
-
     SwapchainHook::swapchain = pSwapChain;
     SwapchainHook::flagsreal = flags;
 

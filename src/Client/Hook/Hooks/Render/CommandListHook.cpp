@@ -30,6 +30,7 @@ void CommandListHook::listCallback(ID3D12CommandQueue *queue, UINT numCommandLis
                                    const ID3D12CommandList **ppCommandLists) {
 
     SwapchainHook::queue = queue;
+    //auto GraphicsCommandList = (ID3D12GraphicsCommandList*) ppCommandLists;
 
     return funcOriginal(queue, numCommandLists, ppCommandLists);
 

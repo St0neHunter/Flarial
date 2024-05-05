@@ -24,7 +24,11 @@ private:
         auto vsyncsetting = Client::settings.getSettingByName<bool>("vsync");
         auto vsyncOption = Options::getOption("vsync");
 
+        //auto renderdocOption = Options::getOption("load_renderdocdll");
+
         if(vsyncOption == nullptr) return;
+
+        //renderdocOption->setvalue(true);
 
         if (vsyncsetting->value && vsyncOption->getvalue())
             vsyncOption->setvalue(false);
