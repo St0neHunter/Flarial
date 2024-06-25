@@ -61,6 +61,7 @@
 #include "Modules/Misc/DiscordRPC/DiscordRPCListener.hpp"
 #include "Modules/Overlay/OverlayModule.hpp"
 #include "Modules/AutoRQ/AutoRQ.hpp"
+#include "Modules/AutoRQSolo/AutoRQSolo.hpp"
 #include "Modules/MovableChat/MovableChat.hpp"
 #include <algorithm>
 
@@ -149,6 +150,7 @@ void ModuleManager::initialize() {
     ModuleManager::addModule(new InventoryHUD());
     //ModuleManager::addModule(new OverlayModule());
     ModuleManager::addModule(new AutoRQ());
+    ModuleManager::addModule(new AutoRQSolo());
     //ModuleManager::addModule(new MovableChat());
     //ModuleManager::addModule(new CompactChat());
 
